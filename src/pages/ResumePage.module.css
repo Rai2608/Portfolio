@@ -1,0 +1,300 @@
+.resumePage {
+  display: flex;
+  flex-direction: column;
+}
+
+.actionBar {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-page-subtle);
+}
+
+.actionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .actionContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.actionTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.actionDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.actionBtns {
+  flex-shrink: 0;
+}
+
+.docSection {
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-16);
+}
+
+/* Resume Document Styling */
+.resumeDoc {
+  background: var(--white);
+  color: #111827;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 48px 48px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+.docHeader {
+  text-align: center;
+  border-bottom: 2px solid #1E3A5F;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.candidateName {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #0F172E;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.candidateTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  margin-bottom: 12px;
+}
+
+.contactBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #4B5563;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #4B5563;
+  text-decoration: none;
+}
+
+.contactItem:hover {
+  color: #1E3A5F;
+}
+
+.contactDot {
+  color: #9CA3AF;
+}
+
+.resumeSection {
+  margin-bottom: 24px;
+}
+
+.sectionHeading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172E;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #D1D5DB;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.summaryText {
+  font-size: 0.925rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.skillsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skillRow {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.skillLabel {
+  color: #111827;
+  margin-right: 6px;
+}
+
+.skillList {
+  color: #4B5563;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.expEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.entryTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172E;
+  margin-bottom: 0;
+}
+
+.entryCompany {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  margin-bottom: 0;
+}
+
+.entryDates {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+.entryBullets {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bulletItem {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.entryTechNote {
+  font-size: 0.85rem;
+  color: #4B5563;
+  margin-top: 4px;
+}
+
+.projectsResumeList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projectEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.techStackLine {
+  font-size: 0.85rem;
+  color: #4B5563;
+  margin-bottom: 2px;
+}
+
+.linkLine {
+  font-size: 0.85rem;
+  color: #4B5563;
+  margin-top: 4px;
+}
+
+.linkLine a {
+  color: var(--primary-600);
+  text-decoration: underline;
+}
+
+.eduEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.eduNote {
+  font-size: 0.85rem;
+  color: #4B5563;
+  margin-bottom: 0;
+}
+
+.certList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.certItem {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* Print Styles */
+@media print {
+  :global(body) {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  :global(.ambient-glow),
+  :global(header),
+  :global(footer),
+  .no-print {
+    display: none !important;
+  }
+
+  .docSection {
+    padding: 0 !important;
+  }
+
+  .resumeDoc {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    color: #000000 !important;
+  }
+
+  .candidateName,
+  .sectionHeading,
+  .entryTitle {
+    color: #000000 !important;
+  }
+
+  .candidateTitle,
+  .entryCompany {
+    color: #1E3A5F !important;
+  }
+}

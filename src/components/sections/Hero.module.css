@@ -1,0 +1,210 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
+  max-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse 95% 75% at 50% 38%, #1f140d 0%, #110c09 45%, #080706 100%);
+}
+
+.backdropGlow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.18) 0%, rgba(180, 83, 9, 0.08) 50%, transparent 75%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Centerpiece fills the hero area edge-to-edge */
+.centerpiece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.centerpiece::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, rgba(8, 7, 6, 0.95) 0%, rgba(8, 7, 6, 0.6) 40%, rgba(8, 7, 6, 0) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  user-select: none;
+  filter: contrast(102%) brightness(98%);
+  transition: transform var(--transition-slow);
+}
+
+/* Bottom Left Statement */
+.bottomLeft {
+  position: absolute;
+  bottom: clamp(28px, 5vh, 48px);
+  left: clamp(24px, 5vw, 64px);
+  max-width: 420px;
+  z-index: 5;
+}
+
+.introStatement {
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.6;
+  color: #E6DCCE;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+  margin: 0;
+}
+
+/* Bottom Right Glowing CTA */
+.bottomRight {
+  position: absolute;
+  bottom: clamp(28px, 5vh, 48px);
+  right: clamp(24px, 5vw, 64px);
+  z-index: 5;
+}
+
+.ctaGlowContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ambientButtonGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 130px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.9) 0%, rgba(249, 115, 22, 0.5) 42%, rgba(245, 158, 11, 0.18) 70%, transparent 85%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 1;
+  animation: pulseButtonGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseButtonGlow {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+.luminousPillBtn {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  background-color: #FAF6F0;
+  color: #140E08;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 0 35px rgba(234, 88, 12, 0.4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.luminousPillBtn:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-color: #FFFFFF;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55), 0 0 50px rgba(249, 115, 22, 0.65);
+  color: #0A0807;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .heroSection {
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+    max-height: none;
+    padding: var(--space-4) 0 var(--space-10);
+  }
+
+  .heroContent {
+    flex-direction: column;
+    height: auto;
+    gap: var(--space-6);
+  }
+
+  .centerpiece {
+    position: relative;
+    width: 100%;
+    height: 52vh;
+  }
+
+  .heroImage {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .bottomLeft {
+    position: static;
+    max-width: 100%;
+    text-align: center;
+    padding: 0 var(--space-6);
+    order: 2;
+  }
+
+  .introStatement {
+    font-size: 1.05rem;
+  }
+
+  .bottomRight {
+    position: static;
+    order: 3;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .luminousPillBtn {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}

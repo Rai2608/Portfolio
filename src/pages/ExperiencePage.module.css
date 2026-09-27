@@ -1,0 +1,123 @@
+.experiencePage {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-page-subtle);
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.metricsBar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .metricsBar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.metricCard {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.metricIcon {
+  color: var(--accent-emerald-400);
+  flex-shrink: 0;
+}
+
+.metricNum {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.metricText {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+.timelineSection {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-16);
+}
+
+.timelineWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resumePromptCard {
+  max-width: 900px;
+  margin: var(--space-12) auto 0;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .resumePromptCard {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.promptContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.promptTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.promptText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0;
+}

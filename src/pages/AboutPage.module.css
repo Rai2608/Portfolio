@@ -1,0 +1,260 @@
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-page-subtle);
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin-top: var(--space-2);
+}
+
+.bioSection {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-16);
+}
+
+.bioGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .bioGrid {
+    grid-template-columns: 340px 1fr;
+    gap: var(--space-12);
+  }
+}
+
+/* Sidebar profile card */
+.sidebarCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileCard {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+}
+
+.avatarWrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--primary-500), var(--accent-emerald-400));
+  margin-bottom: var(--space-4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--space-6);
+}
+
+.profileName {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.profileRole {
+  font-size: 0.9rem;
+  color: var(--primary-400);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.locationTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.sidebarActions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card-solid);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.socialBtn:hover {
+  color: var(--primary-300);
+  border-color: var(--primary-500);
+  transform: translateY(-2px);
+}
+
+/* Main Bio Column */
+.mainBioCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.bioBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.blockTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.titleIcon {
+  color: var(--primary-400);
+}
+
+.paragraph {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Value Grid */
+.valueGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .valueGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.valueItem {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.valueTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary-300);
+  margin-bottom: 0;
+}
+
+.valueDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Beyond Grid */
+.beyondGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.beyondCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.beyondIcon {
+  color: var(--accent-emerald-400);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.beyondTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.beyondText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
