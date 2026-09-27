@@ -72,10 +72,3 @@ Replace these with your actual information before implementation.
 3. **Implement** - Follow `IMPLEMENTATION_PLAN.md` for step-by-step development
 4. **Reference** - During development, refer to specific docs for technical details
 5. **Validate** - Check against `SEO.md`, `ACCESSIBILITY.md`, and `PERFORMANCE.md` during QA
-
-## Next Steps
-
-1. Read [PRD.md](./PRD.md) for user stories and features
-2. Review [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for visual language
-3. Check [TECH_STACK.md](./TECH_STACK.md) for technology decisions
-4. Follow [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md) to begin building
